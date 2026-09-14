@@ -1,0 +1,2841 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Javy Erica P. Borres | Personal Portfolio</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+    <!-- ================= CSS ================= -->
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        :root {
+            --pink: #ff5fa2;
+            --light-pink: #ffe4f1;
+            --purple: #8b5cf6;
+            --dark-purple: #5b21b6;
+            --deep-purple: #32104f;
+            --white: #ffffff;
+            --text: #4a3658;
+            --light-bg: #fff8fc;
+
+            --gradient: linear-gradient(
+                135deg,
+                #ff5fa2,
+                #8b5cf6
+            );
+
+            --soft-gradient: linear-gradient(
+                135deg,
+                #ffe4f1,
+                #eee5ff
+            );
+        }
+
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text);
+            background: var(--light-bg);
+            overflow-x: hidden;
+        }
+
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+
+        ul {
+            list-style: none;
+        }
+
+
+        /* ================= HEADER ================= */
+
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+
+            background: rgba(255, 248, 252, 0.85);
+            backdrop-filter: blur(15px);
+
+            border-bottom: 1px solid rgba(139, 92, 246, 0.08);
+        }
+
+
+        .navbar {
+            max-width: 1200px;
+            margin: auto;
+
+            height: 75px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 0 30px;
+        }
+
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 30px;
+            font-weight: 700;
+            color: var(--deep-purple);
+        }
+
+
+        .logo span {
+            display: inline-flex;
+
+            width: 38px;
+            height: 38px;
+
+            align-items: center;
+            justify-content: center;
+
+            background: var(--gradient);
+            color: white;
+
+            border-radius: 50%;
+            margin-right: 3px;
+        }
+
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+
+        .nav-links a {
+            font-size: 14px;
+            font-weight: 500;
+            position: relative;
+            transition: 0.3s;
+        }
+
+
+        .nav-links a:hover {
+            color: var(--pink);
+        }
+
+
+        .nav-links a::after {
+            content: "";
+
+            position: absolute;
+            left: 0;
+            bottom: -6px;
+
+            width: 0;
+            height: 2px;
+
+            background: var(--gradient);
+
+            transition: 0.3s;
+        }
+
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+
+        .menu-btn {
+            display: none;
+
+            border: none;
+            background: transparent;
+
+            color: var(--purple);
+
+            font-size: 25px;
+            cursor: pointer;
+        }
+
+
+
+        /* ================= HERO ================= */
+
+        .hero {
+            min-height: 100vh;
+
+            position: relative;
+
+            display: flex;
+            align-items: center;
+
+            padding: 120px 8% 70px;
+
+            overflow: hidden;
+
+            background:
+                radial-gradient(
+                    circle at 85% 20%,
+                    rgba(255, 95, 162, 0.15),
+                    transparent 25%
+                ),
+
+                radial-gradient(
+                    circle at 10% 80%,
+                    rgba(139, 92, 246, 0.12),
+                    transparent 25%
+                ),
+
+                var(--light-bg);
+        }
+
+
+        .hero-content {
+            width: 1200px;
+            max-width: 100%;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns: 1.1fr 0.9fr;
+
+            align-items: center;
+
+            gap: 80px;
+        }
+
+
+        .small-title {
+            color: var(--pink);
+
+            font-size: 14px;
+            font-weight: 700;
+
+            letter-spacing: 4px;
+
+            margin-bottom: 15px;
+        }
+
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+
+            color: var(--deep-purple);
+
+            font-size: clamp(50px, 6vw, 78px);
+
+            line-height: 1.05;
+
+            margin-bottom: 18px;
+        }
+
+
+        .hero h1 span {
+            display: block;
+
+            background: var(--gradient);
+
+            -webkit-text-fill-color: transparent;
+        }
+
+
+        .hero h2 {
+            font-size: 20px;
+            font-weight: 500;
+
+            color: var(--purple);
+
+            margin-bottom: 22px;
+        }
+
+
+        .hero-description {
+            max-width: 580px;
+
+            font-size: 15px;
+            line-height: 1.9;
+
+            color: #776681;
+        }
+
+
+        .hero-buttons {
+            display: flex;
+
+            gap: 15px;
+
+            margin-top: 30px;
+        }
+
+
+        .btn {
+            padding: 14px 25px;
+
+            border-radius: 50px;
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+            font-size: 14px;
+            font-weight: 600;
+
+            transition: 0.3s;
+
+            cursor: pointer;
+        }
+
+
+        .primary-btn {
+            color: white;
+
+            background: var(--gradient);
+
+            box-shadow:
+                0 12px 30px rgba(139, 92, 246, 0.25);
+        }
+
+
+        .primary-btn:hover {
+            transform: translateY(-4px);
+
+            box-shadow:
+                0 15px 35px rgba(255, 95, 162, 0.3);
+        }
+
+
+        .secondary-btn {
+            border: 1px solid #e3c8e9;
+
+            color: var(--purple);
+
+            background: white;
+        }
+
+
+        .secondary-btn:hover {
+            background: var(--soft-gradient);
+
+            transform: translateY(-4px);
+        }
+
+
+        .social-icons {
+            display: flex;
+
+            gap: 12px;
+
+            margin-top: 28px;
+        }
+
+
+        .social-icons a,
+        .footer-socials a {
+            width: 38px;
+            height: 38px;
+
+            border-radius: 50%;
+
+            display: flex;
+
+            justify-content: center;
+            align-items: center;
+
+            background: white;
+
+            color: var(--purple);
+
+            box-shadow:
+                0 5px 20px rgba(80, 30, 100, 0.08);
+
+            transition: 0.3s;
+        }
+
+
+        .social-icons a:hover,
+        .footer-socials a:hover {
+            background: var(--gradient);
+
+            color: white;
+
+            transform: translateY(-4px);
+        }
+
+
+
+        /* ================= PROFILE ================= */
+
+        .profile-container {
+            position: relative;
+
+            display: flex;
+
+            justify-content: center;
+        }
+
+
+        .profile-card {
+            width: 360px;
+            min-height: 440px;
+
+            position: relative;
+
+            padding: 35px;
+
+            border-radius: 40px;
+
+            text-align: center;
+
+            background: rgba(255, 255, 255, 0.75);
+
+            backdrop-filter: blur(20px);
+
+            border: 1px solid rgba(255, 255, 255, 0.9);
+
+            box-shadow:
+                0 30px 70px rgba(91, 33, 182, 0.15);
+
+            z-index: 2;
+
+            animation: floating 4s ease-in-out infinite;
+        }
+
+
+        .profile-glow {
+            width: 300px;
+            height: 300px;
+
+            position: absolute;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #ff80b5,
+                    #9f7aea
+                );
+
+            filter: blur(70px);
+
+            opacity: 0.35;
+
+            border-radius: 50%;
+        }
+
+
+        .profile-image {
+            width: 220px;
+            height: 220px;
+
+            margin: auto;
+
+            padding: 8px;
+
+            border-radius: 50%;
+
+            background: var(--gradient);
+        }
+
+
+        .profile-image img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+            border-radius: 50%;
+
+            display: block;
+        }
+
+
+        .profile-info {
+            margin-top: 20px;
+        }
+
+
+        .profile-info h3 {
+            font-family: 'Playfair Display', serif;
+
+            font-size: 27px;
+
+            color: var(--deep-purple);
+        }
+
+
+        .profile-info p {
+            color: var(--pink);
+
+            font-size: 13px;
+        }
+
+
+        .profile-tags {
+            margin-top: 18px;
+
+            display: flex;
+
+            justify-content: center;
+
+            gap: 8px;
+
+            flex-wrap: wrap;
+        }
+
+
+        .profile-tags span {
+            background: var(--light-pink);
+
+            color: var(--dark-purple);
+
+            padding: 5px 12px;
+
+            border-radius: 30px;
+
+            font-size: 11px;
+        }
+
+
+        .sparkle {
+            position: absolute;
+
+            color: var(--pink);
+
+            font-size: 25px;
+        }
+
+
+        .sparkle-one {
+            top: 35px;
+            left: 30px;
+        }
+
+
+        .sparkle-two {
+            top: 120px;
+            right: 25px;
+
+            color: var(--purple);
+        }
+
+
+        .sparkle-three {
+            bottom: 35px;
+            left: 30px;
+        }
+
+
+        .floating-shape {
+            position: absolute;
+
+            border-radius: 50%;
+
+            opacity: 0.4;
+        }
+
+
+        .shape-one {
+            width: 80px;
+            height: 80px;
+
+            background: #ffc4df;
+
+            top: 18%;
+            left: 5%;
+        }
+
+
+        .shape-two {
+            width: 45px;
+            height: 45px;
+
+            background: #c9b1ff;
+
+            right: 5%;
+            bottom: 20%;
+        }
+
+
+        .shape-three {
+            width: 25px;
+            height: 25px;
+
+            background: #ff91bf;
+
+            right: 40%;
+            top: 15%;
+        }
+
+
+        .scroll-down {
+            position: absolute;
+
+            bottom: 25px;
+            left: 50%;
+
+            transform: translateX(-50%);
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+
+            gap: 5px;
+
+            color: #aa91b6;
+
+            font-size: 11px;
+        }
+
+
+        .scroll-down i {
+            animation: bounce 1.5s infinite;
+        }
+
+
+
+        /* ================= SECTIONS ================= */
+
+        .section {
+            padding: 100px 8%;
+        }
+
+
+        .section-heading {
+            text-align: center;
+
+            margin-bottom: 55px;
+        }
+
+
+        .section-heading p {
+            font-size: 12px;
+
+            letter-spacing: 4px;
+
+            color: var(--pink);
+
+            font-weight: 700;
+
+            margin-bottom: 8px;
+        }
+
+
+        .section-heading h2 {
+            font-family: 'Playfair Display', serif;
+
+            font-size: 48px;
+
+            color: var(--deep-purple);
+        }
+
+
+        .section-heading h2 span {
+            color: var(--pink);
+        }
+
+
+
+        /* ================= ABOUT ================= */
+
+        .about {
+            background: white;
+        }
+
+
+        .about-container {
+            max-width: 1100px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 60px;
+
+            align-items: center;
+        }
+
+
+        .about-card {
+            padding: 40px;
+
+            border-radius: 30px;
+
+            background: var(--soft-gradient);
+
+            position: relative;
+        }
+
+
+        .about-icon {
+            width: 60px;
+            height: 60px;
+
+            border-radius: 20px;
+
+            background: var(--gradient);
+
+            color: white;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            font-size: 24px;
+
+            margin-bottom: 25px;
+        }
+
+
+        .about-card h3 {
+            font-family: 'Playfair Display', serif;
+
+            font-size: 30px;
+
+            color: var(--deep-purple);
+
+            margin-bottom: 15px;
+        }
+
+
+        .about-card p {
+            font-size: 14px;
+
+            line-height: 1.9;
+
+            color: #715d78;
+
+            margin-bottom: 15px;
+        }
+
+
+        .about-details {
+            display: grid;
+
+            gap: 25px;
+        }
+
+
+        .detail-item {
+            display: flex;
+
+            gap: 18px;
+
+            align-items: flex-start;
+        }
+
+
+        .detail-item > i {
+            flex-shrink: 0;
+
+            width: 48px;
+            height: 48px;
+
+            border-radius: 15px;
+
+            display: flex;
+
+            justify-content: center;
+            align-items: center;
+
+            background: var(--light-pink);
+
+            color: var(--pink);
+        }
+
+
+        .detail-item h4 {
+            color: var(--deep-purple);
+
+            margin-bottom: 5px;
+        }
+
+
+        .detail-item p {
+            font-size: 13px;
+
+            line-height: 1.6;
+
+            color: #806f87;
+        }
+
+
+
+        /* ================= SKILLS ================= */
+
+        .skills-section {
+            background: var(--light-bg);
+        }
+
+
+        .skills-container {
+            max-width: 1100px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 25px;
+        }
+
+
+        .skill-card {
+            background: white;
+
+            border-radius: 25px;
+
+            padding: 30px;
+
+            box-shadow:
+                0 10px 40px rgba(90, 40, 100, 0.06);
+
+            transition: 0.3s;
+        }
+
+
+        .skill-card:hover {
+            transform: translateY(-8px);
+        }
+
+
+        .skill-icon {
+            width: 55px;
+            height: 55px;
+
+            border-radius: 17px;
+
+            background: var(--soft-gradient);
+
+            color: var(--purple);
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            font-size: 22px;
+
+            margin-bottom: 18px;
+        }
+
+
+        .skill-card h3 {
+            color: var(--deep-purple);
+
+            margin-bottom: 8px;
+        }
+
+
+        .skill-card p {
+            font-size: 13px;
+
+            line-height: 1.7;
+
+            color: #806f87;
+
+            margin-bottom: 18px;
+        }
+
+
+        .skill-bar {
+            width: 100%;
+
+            height: 7px;
+
+            background: #f1e7f3;
+
+            border-radius: 10px;
+
+            overflow: hidden;
+        }
+
+
+        .skill-progress {
+            width: 0;
+
+            height: 100%;
+
+            background: var(--gradient);
+
+            border-radius: 10px;
+
+            transition: width 1.5s ease;
+        }
+
+
+        .skill-percent {
+            display: block;
+
+            margin-top: 8px;
+
+            font-size: 11px;
+
+            color: var(--purple);
+
+            text-align: right;
+        }
+
+
+
+        /* ================= HOBBIES ================= */
+
+        .hobbies {
+            background: white;
+        }
+
+
+        .hobbies-container {
+            max-width: 1100px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns: repeat(4, 1fr);
+
+            gap: 20px;
+        }
+
+
+        .hobby-card {
+            position: relative;
+
+            padding: 35px 25px;
+
+            border-radius: 25px;
+
+            background: var(--light-bg);
+
+            text-align: center;
+
+            overflow: hidden;
+
+            transition: 0.3s;
+        }
+
+
+        .hobby-card:hover {
+            transform: translateY(-8px);
+
+            background: var(--soft-gradient);
+        }
+
+
+        .hobby-number {
+            position: absolute;
+
+            top: 15px;
+            right: 20px;
+
+            font-size: 12px;
+
+            font-weight: 700;
+
+            color: #d9c9e1;
+        }
+
+
+        .hobby-icon {
+            width: 70px;
+            height: 70px;
+
+            margin: 10px auto 20px;
+
+            display: flex;
+
+            justify-content: center;
+            align-items: center;
+
+            background: white;
+
+            border-radius: 50%;
+
+            color: var(--pink);
+
+            font-size: 27px;
+
+            box-shadow:
+                0 10px 25px rgba(100, 40, 120, 0.08);
+        }
+
+
+        .hobby-card h3 {
+            font-family: 'Playfair Display', serif;
+
+            color: var(--deep-purple);
+
+            font-size: 21px;
+
+            margin-bottom: 10px;
+        }
+
+
+        .hobby-card p {
+            font-size: 12px;
+
+            line-height: 1.7;
+
+            color: #806f87;
+        }
+
+
+
+        /* ================= QUOTE ================= */
+
+        .quote-section {
+            padding: 100px 8%;
+
+            text-align: center;
+
+            background: var(--gradient);
+
+            color: white;
+        }
+
+
+        .quote-content {
+            max-width: 750px;
+
+            margin: auto;
+        }
+
+
+        .quote-content > i {
+            font-size: 35px;
+
+            margin-bottom: 20px;
+
+            opacity: 0.7;
+        }
+
+
+        .quote-content h2 {
+            font-family: 'Playfair Display', serif;
+
+            font-size: clamp(30px, 4vw, 48px);
+
+            line-height: 1.3;
+        }
+
+
+        .quote-content p {
+            margin-top: 20px;
+
+            opacity: 0.8;
+        }
+
+
+
+        /* ================= CONTACT ================= */
+
+        .contact {
+            background: white;
+        }
+
+
+        .contact-container {
+            max-width: 1050px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns: 0.8fr 1.2fr;
+
+            gap: 70px;
+        }
+
+
+        .contact-info h3 {
+            font-family: 'Playfair Display', serif;
+
+            font-size: 32px;
+
+            color: var(--deep-purple);
+
+            margin-bottom: 15px;
+        }
+
+
+        .contact-info > p {
+            font-size: 13px;
+
+            line-height: 1.8;
+
+            color: #806f87;
+
+            margin-bottom: 30px;
+        }
+
+
+        .contact-item {
+            display: flex;
+
+            gap: 15px;
+
+            align-items: center;
+
+            margin-bottom: 20px;
+        }
+
+
+        .contact-icon {
+            width: 45px;
+            height: 45px;
+
+            border-radius: 14px;
+
+            background: var(--light-pink);
+
+            color: var(--pink);
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+        }
+
+
+        .contact-item span {
+            font-size: 10px;
+
+            color: #a18ca9;
+
+            text-transform: uppercase;
+
+            letter-spacing: 1px;
+        }
+
+
+        .contact-item p {
+            font-size: 13px;
+
+            color: var(--deep-purple);
+
+            font-weight: 500;
+        }
+
+
+        .contact-form {
+            padding: 35px;
+
+            background: var(--light-bg);
+
+            border-radius: 30px;
+        }
+
+
+        .input-group {
+            margin-bottom: 17px;
+        }
+
+
+        .input-group input,
+        .input-group textarea {
+            width: 100%;
+
+            border: 1px solid #eadcf0;
+
+            outline: none;
+
+            background: white;
+
+            padding: 15px 18px;
+
+            border-radius: 15px;
+
+            font-family: 'Poppins', sans-serif;
+
+            font-size: 13px;
+
+            color: var(--text);
+
+            resize: none;
+
+            transition: 0.3s;
+        }
+
+
+        .input-group input:focus,
+        .input-group textarea:focus {
+            border-color: var(--pink);
+
+            box-shadow:
+                0 0 0 4px rgba(255, 95, 162, 0.08);
+        }
+
+
+        .contact-form button {
+            border: none;
+        }
+
+
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            padding: 45px 8% 25px;
+
+            background: var(--deep-purple);
+
+            color: white;
+        }
+
+
+        .footer-content {
+            max-width: 1100px;
+
+            margin: auto;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 20px;
+        }
+
+
+        .footer-content .logo {
+            color: white;
+        }
+
+
+        .footer-content p {
+            font-size: 12px;
+
+            opacity: 0.7;
+        }
+
+
+        .footer-socials {
+            display: flex;
+
+            gap: 8px;
+        }
+
+
+        .footer-socials a {
+            width: 34px;
+            height: 34px;
+        }
+
+
+        .copyright {
+            text-align: center;
+
+            margin-top: 35px;
+
+            padding-top: 20px;
+
+            border-top:
+                1px solid rgba(255,255,255,0.1);
+
+            font-size: 10px;
+
+            opacity: 0.6;
+        }
+
+
+
+        /* ================= BACK TO TOP ================= */
+
+        .back-to-top {
+            position: fixed;
+
+            right: 25px;
+            bottom: 25px;
+
+            width: 45px;
+            height: 45px;
+
+            border: none;
+
+            border-radius: 50%;
+
+            background: var(--gradient);
+
+            color: white;
+
+            cursor: pointer;
+
+            opacity: 0;
+
+            visibility: hidden;
+
+            transform: translateY(20px);
+
+            transition: 0.3s;
+
+            z-index: 500;
+
+            box-shadow:
+                0 10px 25px rgba(139, 92, 246, 0.3);
+        }
+
+
+        .back-to-top.show {
+            opacity: 1;
+
+            visibility: visible;
+
+            transform: translateY(0);
+        }
+
+
+
+        /* ================= ANIMATIONS ================= */
+
+        @keyframes floating {
+
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+
+
+        @keyframes bounce {
+
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(6px);
+            }
+        }
+
+
+
+        /* ================= TABLET ================= */
+
+        @media (max-width: 900px) {
+
+            .nav-links {
+                position: absolute;
+
+                top: 75px;
+                left: 0;
+
+                width: 100%;
+
+                padding: 25px;
+
+                background: white;
+
+                flex-direction: column;
+
+                align-items: center;
+
+                gap: 20px;
+
+                transform: translateY(-150%);
+
+                transition: 0.4s;
+
+                box-shadow:
+                    0 15px 30px rgba(70, 30, 90, 0.08);
+            }
+
+
+            .nav-links.active {
+                transform: translateY(0);
+            }
+
+
+            .menu-btn {
+                display: block;
+            }
+
+
+            .hero-content {
+                grid-template-columns: 1fr;
+
+                text-align: center;
+
+                gap: 60px;
+            }
+
+
+            .hero-description {
+                margin: auto;
+            }
+
+
+            .hero-buttons,
+            .social-icons {
+                justify-content: center;
+            }
+
+
+            .profile-container {
+                order: -1;
+            }
+
+
+            .profile-card {
+                width: 320px;
+
+                min-height: 400px;
+            }
+
+
+            .profile-image {
+                width: 190px;
+                height: 190px;
+            }
+
+
+            .about-container,
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+
+
+            .hobbies-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+
+
+        /* ================= MOBILE ================= */
+
+        @media (max-width: 600px) {
+
+            .navbar {
+                padding: 0 20px;
+            }
+
+
+            .hero {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+
+            .hero h1 {
+                font-size: 48px;
+            }
+
+
+            .hero h2 {
+                font-size: 17px;
+            }
+
+
+            .hero-buttons {
+                flex-direction: column;
+
+                align-items: center;
+            }
+
+
+            .section {
+                padding: 75px 20px;
+            }
+
+
+            .section-heading h2 {
+                font-size: 38px;
+            }
+
+
+            .skills-container,
+            .hobbies-container {
+                grid-template-columns: 1fr;
+            }
+
+
+            .profile-card {
+                width: 290px;
+            }
+
+
+            .contact-form {
+                padding: 25px;
+            }
+
+
+            .footer-content {
+                flex-direction: column;
+
+                text-align: center;
+            }
+
+
+            .scroll-down {
+                display: none;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
+        <nav class="navbar">
+
+            <a href="#home" class="logo">
+                <span>J</span>avy.
+            </a>
+
+
+            <ul class="nav-links" id="navLinks">
+
+                <li><a href="#home">Home</a></li>
+
+                <li><a href="#about">About</a></li>
+
+                <li><a href="#skills">Skills</a></li>
+
+                <li><a href="#hobbies">Hobbies</a></li>
+
+                <li><a href="#contact">Contact</a></li>
+
+            </ul>
+
+
+            <button class="menu-btn" id="menuBtn">
+
+                <i class="fas fa-bars"></i>
+
+            </button>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero" id="home">
+
+        <div class="floating-shape shape-one"></div>
+
+        <div class="floating-shape shape-two"></div>
+
+        <div class="floating-shape shape-three"></div>
+
+
+        <div class="hero-content">
+
+
+            <div class="hero-text">
+
+                <p class="small-title">
+                    HELLO, I'M
+                </p>
+
+
+                <h1>
+
+                    Javy Erica
+
+                    <span>
+                        P. Borres
+                    </span>
+
+                </h1>
+
+
+                <h2>
+                    Creative Mind • Storyteller • Dreamer
+                </h2>
+
+
+                <p class="hero-description">
+
+                    Welcome to my little corner of the internet!
+
+                    I am a creative and curious person who enjoys
+
+                    turning ideas into meaningful experiences,
+
+                    exploring new possibilities, and expressing
+
+                    myself through creativity.
+
+                </p>
+
+
+                <div class="hero-buttons">
+
+                    <a href="#about" class="btn primary-btn">
+
+                        Discover More
+
+                        <i class="fas fa-arrow-right"></i>
+
+                    </a>
+
+
+                    <a href="#contact" class="btn secondary-btn">
+
+                        Contact Me
+
+                    </a>
+
+                </div>
+
+
+                <div class="social-icons">
+
+                    <a href="#">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fab fa-github"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PROFILE -->
+
+            <div class="profile-container">
+
+                <div class="profile-glow"></div>
+
+
+                <div class="profile-card">
+
+                    <div class="sparkle sparkle-one">
+                        ✦
+                    </div>
+
+                    <div class="sparkle sparkle-two">
+                        ✧
+                    </div>
+
+                    <div class="sparkle sparkle-three">
+                        ♡
+                    </div>
+
+
+                    <div class="profile-image">
+
+                        <img
+                            src="profile.jpeg"
+                            alt="Javy Erica"
+                        >
+
+                    </div>
+
+
+                    <div class="profile-info">
+
+                        <h3>
+                            Javy Erica
+                        </h3>
+
+                        <p>
+                            BACHELOR OF SCIENCE IN INFORMATION TECHNOLOGY
+                        </p>
+
+                    </div>
+
+
+                    <div class="profile-tags">
+
+                        <span>Creative</span>
+
+                        <span>Dreamer</span>
+
+                        <span>Writer</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="scroll-down">
+
+            <span>
+                Scroll to explore
+            </span>
+
+            <i class="fas fa-chevron-down"></i>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section class="section about" id="about">
+
+        <div class="section-heading">
+
+            <p>
+                GET TO KNOW ME
+            </p>
+
+            <h2>
+                About <span>Me</span>
+            </h2>
+
+        </div>
+
+
+        <div class="about-container">
+
+
+            <div class="about-card">
+
+                <div class="about-icon">
+
+                    <i class="fas fa-heart"></i>
+
+                </div>
+
+
+                <h3>
+                    A Little About Me
+                </h3>
+
+
+                <p>
+
+                    Hi! I'm
+                    <strong>Javy Erica P. Borres</strong>.
+
+                    I am someone who loves learning, creating,
+
+                    and discovering new things. I believe that
+
+                    creativity can be found in the simplest
+
+                    moments of everyday life.
+
+                </p>
+
+
+                <p>
+
+                    I enjoy expressing my imagination through
+
+                    writing, designing, and exploring different
+
+                    ideas. I also value organization, responsibility,
+
+                    and making the most of every opportunity.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="about-details">
+
+
+                <div class="detail-item">
+
+                    <i class="fas fa-lightbulb"></i>
+
+                    <div>
+
+                        <h4>
+                            Creative Thinker
+                        </h4>
+
+                        <p>
+
+                            I enjoy developing fresh ideas and
+
+                            finding creative ways to solve problems.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="detail-item">
+
+                    <i class="fas fa-clock"></i>
+
+                    <div>
+
+                        <h4>
+                            Time Conscious
+                        </h4>
+
+                        <p>
+
+                            I value deadlines and try to manage
+
+                            my time efficiently.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="detail-item">
+
+                    <i class="fas fa-people-arrows"></i>
+
+                    <div>
+
+                        <h4>
+                            Adaptable
+                        </h4>
+
+                        <p>
+
+                            I can adjust to different tasks,
+
+                            environments, and challenges.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="detail-item">
+
+                    <i class="fas fa-seedling"></i>
+
+                    <div>
+
+                        <h4>
+                            Always Learning
+                        </h4>
+
+                        <p>
+
+                            I believe every experience is a chance
+
+                            to learn something new.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= SKILLS ================= -->
+
+    <section class="section skills-section" id="skills">
+
+        <div class="section-heading">
+
+            <p>
+                WHAT I CAN DO
+            </p>
+
+            <h2>
+                My <span>Skills</span>
+            </h2>
+
+        </div>
+
+
+        <div class="skills-container">
+
+
+            <div class="skill-card">
+
+                <div class="skill-icon">
+                    <i class="fas fa-layer-group"></i>
+                </div>
+
+                <h3>
+                    Multitasking
+                </h3>
+
+                <p>
+
+                    Capable of handling multiple responsibilities
+
+                    while keeping tasks organized.
+
+                </p>
+
+
+                <div class="skill-bar">
+
+                    <div
+                        class="skill-progress"
+                        data-width="90%">
+                    </div>
+
+                </div>
+
+                <span class="skill-percent">
+                    90%
+                </span>
+
+            </div>
+
+
+
+            <div class="skill-card">
+
+                <div class="skill-icon">
+                    <i class="fas fa-calendar-check"></i>
+                </div>
+
+                <h3>
+                    Time Management
+                </h3>
+
+                <p>
+
+                    I prioritize important tasks and work toward
+
+                    completing projects on time.
+
+                </p>
+
+
+                <div class="skill-bar">
+
+                    <div
+                        class="skill-progress"
+                        data-width="88%">
+                    </div>
+
+                </div>
+
+                <span class="skill-percent">
+                    88%
+                </span>
+
+            </div>
+
+
+
+            <div class="skill-card">
+
+                <div class="skill-icon">
+                    <i class="fas fa-palette"></i>
+                </div>
+
+                <h3>
+                    Creative Designing
+                </h3>
+
+                <p>
+
+                    I enjoy creating visually appealing designs
+
+                    and experimenting with creative concepts.
+
+                </p>
+
+
+                <div class="skill-bar">
+
+                    <div
+                        class="skill-progress"
+                        data-width="85%">
+                    </div>
+
+                </div>
+
+                <span class="skill-percent">
+                    85%
+                </span>
+
+            </div>
+
+
+
+            <div class="skill-card">
+
+                <div class="skill-icon">
+                    <i class="fas fa-pen-nib"></i>
+                </div>
+
+                <h3>
+                    Creative Writing
+                </h3>
+
+                <p>
+
+                    I enjoy creating stories, characters,
+
+                    and imaginative worlds through writing.
+
+                </p>
+
+
+                <div class="skill-bar">
+
+                    <div
+                        class="skill-progress"
+                        data-width="82%">
+                    </div>
+
+                </div>
+
+                <span class="skill-percent">
+                    82%
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= HOBBIES ================= -->
+
+    <section class="section hobbies" id="hobbies">
+
+        <div class="section-heading">
+
+            <p>
+                WHEN I'M NOT STUDYING
+            </p>
+
+            <h2>
+                My <span>Hobbies</span>
+            </h2>
+
+        </div>
+
+
+        <div class="hobbies-container">
+
+
+            <div class="hobby-card">
+
+                <div class="hobby-number">
+                    01
+                </div>
+
+                <div class="hobby-icon">
+
+                    <i class="fas fa-book-open"></i>
+
+                </div>
+
+                <h3>
+                    Reading Novels
+                </h3>
+
+                <p>
+
+                    Getting lost in stories, exploring different
+
+                    worlds, and meeting unforgettable characters.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="hobby-card">
+
+                <div class="hobby-number">
+                    02
+                </div>
+
+                <div class="hobby-icon">
+
+                    <i class="fas fa-feather-pointed"></i>
+
+                </div>
+
+                <h3>
+                    Writing Stories
+                </h3>
+
+                <p>
+
+                    Turning imagination into stories and creating
+
+                    characters and adventures of my own.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="hobby-card">
+
+                <div class="hobby-number">
+                    03
+                </div>
+
+                <div class="hobby-icon">
+
+                    <i class="fas fa-mobile-screen-button"></i>
+
+                </div>
+
+                <h3>
+                    Mobile Games
+                </h3>
+
+                <p>
+
+                    Relaxing, having fun, and challenging myself
+
+                    through different mobile games.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="hobby-card">
+
+                <div class="hobby-number">
+                    04
+                </div>
+
+                <div class="hobby-icon">
+
+                    <i class="fas fa-wand-magic-sparkles"></i>
+
+                </div>
+
+                <h3>
+                    Designing
+                </h3>
+
+                <p>
+
+                    Experimenting with colors, layouts, and
+
+                    creative visual ideas.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= QUOTE ================= -->
+
+    <section class="quote-section">
+
+        <div class="quote-content">
+
+            <i class="fas fa-quote-left"></i>
+
+            <h2>
+                "Creativity is intelligence having fun."
+            </h2>
+
+            <p>
+                — Albert Einstein
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= CONTACT ================= -->
+
+    <section class="section contact" id="contact">
+
+        <div class="section-heading">
+
+            <p>
+                LET'S CONNECT
+            </p>
+
+            <h2>
+                Get In <span>Touch</span>
+            </h2>
+
+        </div>
+
+
+        <div class="contact-container">
+
+
+            <div class="contact-info">
+
+                <h3>
+                    Let's create something amazing!
+                </h3>
+
+
+                <p>
+
+                    Whether you want to talk about a project,
+
+                    share an idea, or simply say hello,
+
+                    I'd love to hear from you.
+
+                </p>
+
+
+                <div class="contact-item">
+
+                    <div class="contact-icon">
+
+                        <i class="fas fa-envelope"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Email
+                        </span>
+
+                        <p>
+                            ericaborres6@gmail.com
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <div class="contact-icon">
+
+                        <i class="fas fa-location-dot"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Location
+                        </span>
+
+                        <p>
+                            Philippines
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <form
+                class="contact-form"
+                id="contactForm"
+            >
+
+                <div class="input-group">
+
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Your Name"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Your Email"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <textarea
+                        id="message"
+                        rows="6"
+                        placeholder="Your Message"
+                        required
+                    ></textarea>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="btn primary-btn"
+                >
+
+                    Send Message
+
+                    <i class="fas fa-paper-plane"></i>
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-content">
+
+
+            <a href="#home" class="logo">
+
+                <span>J</span>avy.
+
+            </a>
+
+
+            <p>
+                Made with ♡ and a little bit of creativity.
+            </p>
+
+
+            <div class="footer-socials">
+
+                <a href="#">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fab fa-instagram"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fab fa-github"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="copyright">
+
+            ©
+            <span id="year"></span>
+
+            Javy Erica P. Borres.
+            All Rights Reserved.
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- BACK TO TOP -->
+
+    <button
+        class="back-to-top"
+        id="backToTop"
+    >
+
+        <i class="fas fa-arrow-up"></i>
+
+    </button>
+
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script>
+
+        /* ================= MOBILE MENU ================= */
+
+        const menuBtn =
+            document.getElementById("menuBtn");
+
+        const navLinks =
+            document.getElementById("navLinks");
+
+
+        menuBtn.addEventListener("click", () => {
+
+            navLinks.classList.toggle("active");
+
+            const icon =
+                menuBtn.querySelector("i");
+
+
+            if (navLinks.classList.contains("active")) {
+
+                icon.classList.remove("fa-bars");
+
+                icon.classList.add("fa-xmark");
+
+            } else {
+
+                icon.classList.remove("fa-xmark");
+
+                icon.classList.add("fa-bars");
+
+            }
+
+        });
+
+
+
+        /* ================= CLOSE MENU ================= */
+
+        document
+            .querySelectorAll(".nav-links a")
+            .forEach(link => {
+
+                link.addEventListener("click", () => {
+
+                    navLinks.classList.remove("active");
+
+                    const icon =
+                        menuBtn.querySelector("i");
+
+                    icon.classList.remove("fa-xmark");
+
+                    icon.classList.add("fa-bars");
+
+                });
+
+            });
+
+
+
+        /* ================= BACK TO TOP ================= */
+
+        const backToTop =
+            document.getElementById("backToTop");
+
+
+        window.addEventListener("scroll", () => {
+
+            if (window.scrollY > 500) {
+
+                backToTop.classList.add("show");
+
+            } else {
+
+                backToTop.classList.remove("show");
+
+            }
+
+        });
+
+
+        backToTop.addEventListener("click", () => {
+
+            window.scrollTo({
+
+                top: 0,
+
+                behavior: "smooth"
+
+            });
+
+        });
+
+
+
+        /* ================= YEAR ================= */
+
+        document.getElementById("year")
+            .textContent =
+            new Date().getFullYear();
+
+
+
+        /* ================= SKILL ANIMATION ================= */
+
+        const skillProgress =
+            document.querySelectorAll(".skill-progress");
+
+
+        const skillObserver =
+            new IntersectionObserver(
+
+                entries => {
+
+                    entries.forEach(entry => {
+
+                        if (entry.isIntersecting) {
+
+                            const progress =
+                                entry.target;
+
+                            const width =
+                                progress.getAttribute(
+                                    "data-width"
+                                );
+
+                            progress.style.width =
+                                width;
+
+                        }
+
+                    });
+
+                },
+
+                {
+                    threshold: 0.5
+                }
+
+            );
+
+
+        skillProgress.forEach(progress => {
+
+            skillObserver.observe(progress);
+
+        });
+
+
+
+        /* ================= REVEAL ANIMATION ================= */
+
+        const revealElements =
+            document.querySelectorAll(
+                ".skill-card, .hobby-card, .detail-item, .about-card"
+            );
+
+
+        const revealObserver =
+            new IntersectionObserver(
+
+                entries => {
+
+                    entries.forEach(entry => {
+
+                        if (entry.isIntersecting) {
+
+                            entry.target.style.opacity = "1";
+
+                            entry.target.style.transform =
+                                "translateY(0)";
+
+                        }
+
+                    });
+
+                },
+
+                {
+                    threshold: 0.15
+                }
+
+            );
+
+
+        revealElements.forEach(element => {
+
+            element.style.opacity = "0";
+
+            element.style.transform =
+                "translateY(30px)";
+
+            element.style.transition =
+                "opacity 0.7s ease, transform 0.7s ease";
+
+            revealObserver.observe(element);
+
+        });
+
+
+
+        /* ================= CONTACT FORM ================= */
+
+        const contactForm =
+            document.getElementById("contactForm");
+
+
+        contactForm.addEventListener(
+            "submit",
+            function(event) {
+
+                event.preventDefault();
+
+
+                const name =
+                    document.getElementById("name").value;
+
+                const email =
+                    document.getElementById("email").value;
+
+                const message =
+                    document.getElementById("message").value;
+
+
+                if (name && email && message) {
+
+                    alert(
+
+                        `Thank you, ${name}! 💗\n\n` +
+
+                        `Your message has been received.\n` +
+
+                        `I'll get back to you soon! ✨`
+
+                    );
+
+
+                    contactForm.reset();
+
+                }
+
+            }
+        );
+
+
+
+        /* ================= TYPING EFFECT ================= */
+
+        const heroSubtitle =
+            document.querySelector(".hero h2");
+
+
+        const phrases = [
+
+            "Creative Mind • Storyteller • Dreamer",
+
+            "Future Designer • Writer • Explorer",
+
+            "Multitasker • Learner • Creator",
+
+            "Turning Ideas Into Something Beautiful ✨"
+
+        ];
+
+
+        let phraseIndex = 0;
+
+        let characterIndex = 0;
+
+        let deleting = false;
+
+
+
+        function typeEffect() {
+
+            const currentPhrase =
+                phrases[phraseIndex];
+
+
+            if (!deleting) {
+
+                heroSubtitle.textContent =
+                    currentPhrase.substring(
+                        0,
+                        characterIndex + 1
+                    );
+
+
+                characterIndex++;
+
+
+                if (
+                    characterIndex ===
+                    currentPhrase.length
+                ) {
+
+                    deleting = true;
+
+                    setTimeout(
+                        typeEffect,
+                        1800
+                    );
+
+                    return;
+
+                }
+
+            } else {
+
+                heroSubtitle.textContent =
+                    currentPhrase.substring(
+                        0,
+                        characterIndex - 1
+                    );
+
+
+                characterIndex--;
+
+
+                if (characterIndex === 0) {
+
+                    deleting = false;
+
+                    phraseIndex++;
+
+
+                    if (
+                        phraseIndex >=
+                        phrases.length
+                    ) {
+
+                        phraseIndex = 0;
+
+                    }
+
+                }
+
+            }
+
+
+            const speed =
+                deleting ? 35 : 65;
+
+
+            setTimeout(
+                typeEffect,
+                speed
+            );
+
+        }
+
+
+        typeEffect();
+
+
+
+        /* ================= PROFILE MOUSE EFFECT ================= */
+
+        const profileCard =
+            document.querySelector(".profile-card");
+
+
+        document.addEventListener(
+            "mousemove",
+            (event) => {
+
+                if (window.innerWidth > 900) {
+
+                    const x =
+                        (
+                            window.innerWidth / 2 -
+                            event.clientX
+                        ) / 50;
+
+
+                    const y =
+                        (
+                            window.innerHeight / 2 -
+                            event.clientY
+                        ) / 50;
+
+
+                    profileCard.style.transform =
+                        `translate(${x}px, ${y}px)`;
+
+                }
+
+            }
+        );
+
+
+        document.addEventListener(
+            "mouseleave",
+            () => {
+
+                profileCard.style.transform =
+                    "translate(0, 0)";
+
+            }
+        );
+
+    </script>
+
+</body>
+</html>
